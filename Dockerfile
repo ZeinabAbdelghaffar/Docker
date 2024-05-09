@@ -28,17 +28,14 @@ WORKDIR /var/www/html
 # Copy existing application directory contents
 COPY ./laravel-authentication-app /var/www/html
 
-# Install Nginx
-RUN apt-get install -y nginx
-
 # Copy Nginx configuration file
 COPY nginx.conf /etc/nginx/sites-available/default
 
 # Create a symbolic link to enable the site
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 80
+EXPOSE 80
 
 # Start Nginx and PHP-FPM
 CMD service nginx start && php-fpm
