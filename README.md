@@ -54,6 +54,9 @@ Follow these simple steps to set up and run the Laravel Authentication Project:
    ```bash
    docker build -t laravel-authentication-app .
    ```
+![image](https://github.com/ZeinabAbdelghaffar/Docker/assets/87963230/125fd8a6-293b-430f-9cca-d6ecd42459b8)
+![image](https://github.com/ZeinabAbdelghaffar/Docker/assets/87963230/ac33eb19-f6ed-4e5a-b389-6281197239fc)
+
 
 9. **Spin up the Docker Containers:**
 
