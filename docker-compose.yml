@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-authentication-app
+    container_name: laravel-authentication-app
+    volumes:
+      - ./laravel-authentication-app:/var/www/html
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_DATABASE=your_database_name
+      - DB_USERNAME=your_database_username
+      - DB_PASSWORD=your_database_password
+
+  db:
+    image: mysql:5.7
+    container_name: laravel-authentication-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
