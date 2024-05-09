@@ -32,7 +32,8 @@ COPY ./laravel-authentication-app /var/www/html
 COPY nginx/default.conf /etc/nginx/sites-available/default
 
 # Create a symbolic link to enable the site
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+RUN rm -f /etc/nginx/sites-enabled/default && \
+    ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 # Expose port 80
 EXPOSE 80
