@@ -43,8 +43,6 @@ Follow these simple steps to set up and run the Laravel Authentication Project:
 
    - Create a workflow file that automates the process of building and pushing the Docker image to Docker Hub.
 
-   ![image](https://github.com/ZeinabAbdelghaffar/Docker/assets/87963230/f9cf3b26-c7be-46b5-8528-93b34f1e0476)
-
 7. **Created a docker-compose.yml:**
 
    - This file spins up a MySQL database as the authentication backend and your application container.
