@@ -29,7 +29,7 @@ WORKDIR /var/www/html
 COPY ./laravel-authentication-app /var/www/html
 
 # Copy Nginx configuration file
-COPY nginx.conf /etc/nginx/sites-available/default
+COPY nginx/default.conf /etc/nginx/sites-available/default
 
 # Create a symbolic link to enable the site
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
